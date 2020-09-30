@@ -1,0 +1,7 @@
+<!--pages/life/life.wxml-->
+<view>
+  <view wx:for="{{lifestyle}}" wx:key="key">
+    <view class="type">{{type[item.type]}}</view>
+    <view class="txt">{{item.txt}}</view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/timesTable/timesTable",
+    "pages/life/life",
+    "pages/weather/weather"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "190307021012",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon-indexsel1.png",
+        "selectedIconPath": "images/icon-indexsel1.png"
+      },
+      {
+        "pagePath": "pages/timesTable/timesTable",
+        "text": "乘法表",
+        "iconPath": "images/table.png",
+        "selectedIconPath": "images/table.png"
+      },
+      {
+        "pagePath": "pages/life/life",
+        "text": "生活指数",
+        "iconPath": "images/life.png",
+        "selectedIconPath": "images/life.png"
+      },
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "天气",
+        "iconPath": "images/weather.png",
+        "selectedIconPath": "images/weather.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取实时天气地址"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

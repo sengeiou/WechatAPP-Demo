@@ -1,0 +1,55 @@
+<image src="../../images/bg.jpg" class="bg"></image>
+<view class="container">
+  <view>
+    <view>
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <!-- 搜索框 -->
+          <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="请输入城市" bindinput="locationInput" />
+          </view>
+        </view>
+        <!-- 搜索按钮,调用搜索查询方法 -->
+        <view class="weui-search-bar__cancel-btn" bindtap='search'>搜索</view>
+      </view>
+    </view>
+  </view>
+  <view class="nowWeather">
+    <view class="city w">{{city}} {{district}}  {{street}}</view>
+    <view class="temp w b">{{tmp}}°</view>
+    <view class="weather w">{{txt}} | 空气 {{qlty}}</view>
+  </view>
+
+  <view class="weahterDetail">
+    <view class="">
+      <view class="w center">{{dir}}</view>
+      <view wx:if="{{sc == '微风'}}" class="w b center f50">微风</view>
+      <view wx:else class="w b center f50">{{sc}}级</view>
+    </view>
+    <view class="l"></view>
+    <view class="">
+      <view class="w center">相对湿度</view>
+      <view class="w b center f50">{{hum}}%</view>
+    </view>
+    <view class="l"></view>
+    <view class="">
+      <view class="w center">体感温度</view>
+      <view class="w b center f50">{{fl}}°</view>
+    </view>
+  </view>
+
+</view>
+
+
+<view wx:for="{{daily_forecast}}" wx:for-index="i" wx:for-item="item" wx:key="key">
+  <view class="hor forcast">
+    <view class="center">{{day[i]}}</view>
+    <view class="hor">
+      <image class="img" src="../../images/icons/{{item.iconDay}}.png"></image>
+      <view class="center">{{item.windDirDay}}|{{item.windScaleDay}}级</view>
+    </view>
+    <view class="center">{{item.tempMin}}°/ {{item.tempMax}}°</view>
+  </view>
+</view>
+<view class="center">{{updateTime}}</view>

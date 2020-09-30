@@ -1,0 +1,16 @@
+<!--pages/timesTable/timesTable.wxml-->
+<view class='con'>
+  <view class="rows">
+    <view class="rowsBlock" wx:for="{{rows}}" wx:for-item="i" wx:key="key">
+      {{i}}
+    </view>
+  </view>
+  <view wx:for="{{number}}" wx:for-item="i" wx:key="key">
+    <view class="cols">{{i}}</view>
+    <view class="block" wx:for="{{number}}" wx:for-item="j" wx:key="key">
+      <view wx:if="{{j<=i}}">
+        {{j}}*{{i}}={{i*j}}
+      </view>
+    </view>
+  </view>
+</view>
